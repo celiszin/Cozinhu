@@ -1,4 +1,4 @@
-namespace cozinhu.Models;
+namespace GCook.Models;
 
 public class ErrorViewModel
 {

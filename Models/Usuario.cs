@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace cozinhu.Models;
+namespace GCook.Models;
 
 [Table("Usuario")]
 public class Usuario
@@ -11,7 +11,7 @@ public class Usuario
     public string UsuarioId { get; set; }
     [ForeignKey("UsuarioId")]
 
-    public IdentityUser ContaUsuario { get; set; }
+    public IdentityUser ContaUsuario  { get; set; }
 
     [Required]
     [StringLength(50)]

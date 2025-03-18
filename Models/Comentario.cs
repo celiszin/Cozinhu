@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace cozinhu.Models;
+namespace GCook.Models;
 
 [Table("Comentario")]
 public class Comentario
@@ -12,7 +12,7 @@ public class Comentario
     [Required]
     public int ReceitaId { get; set; }
     [ForeignKey("ReceitaId")]
-    public string Receita { get; set; }
+    public Receita Receita { get; set; }
 
     [Required]
     public string UsuarioId { get; set; }
@@ -22,5 +22,5 @@ public class Comentario
     public DateTime DataComentario { get; set; } = DateTime.Now;
 
     [StringLength(300)]
-    public string TextoComentaro { get; set; }
+    public string TextoComentario { get; set; }
 }
